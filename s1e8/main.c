@@ -3,9 +3,10 @@
 
 int main()
 {
-    char a = 70, b = 105, c = 115, d = 104, e = 67;
+    char height;
 
-    printf("%c%c%c%c%c\n", a, b, c, d, e);
+    height = 170;
+    printf("XiaoJiaYu's height is %dcm!\n", height);
 
     return 0;
 }

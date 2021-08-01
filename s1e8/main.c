@@ -3,10 +3,12 @@
 
 int main()
 {
-    unsigned char height;
+    char a[6] = {'F', 'i', 's', 'h', 'C', '\0'};
+    char b[] = "FishC";
 
-    height = 170;
-    printf("XiaoJiaYu's height is %dcm!\n", height);
+    printf("%s\n", a);
+    printf("%s\n", b);
+    printf("Hello\n");
 
     return 0;
 }

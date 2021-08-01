@@ -3,7 +3,7 @@
 
 int main()
 {
-    char height;
+    unsigned char height;
 
     height = 170;
     printf("XiaoJiaYu's height is %dcm!\n", height);

@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1627846194 source:c:\users\richa\desktop\githubrepos\c-refresh\s1e9\main.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+

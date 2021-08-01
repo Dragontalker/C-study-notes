@@ -4,10 +4,16 @@
 
 int main()
 {
-    char str[] = "I love FishC.com!";
+    char str1[] = "Original string";
+    char str2[] = "New string";
+    char str3[100];
 
-    printf("sizeof str = %d\n", sizeof(str));
-    printf("strlen str = %u\n", strlen(str));
+    strcpy(str1, str2);
+    strcpy(str3, "Copy successful!");
+
+    printf("str1: %s\n", str1);
+    printf("str2: %s\n", str2);
+    printf("str3: %s\n", str3);
 
     return 0;
 }

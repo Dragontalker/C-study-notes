@@ -10,5 +10,7 @@
 int main()
 {
     printf("%s established at year%d, month%d, day%d\n", NAME, YEAR, MONTH, DAY);
+    printf("%s is established by %s...\n", NAME, BOSS);
+    printf("The url for %s is %s...\n", NAME, URL);
     return 0;
 }

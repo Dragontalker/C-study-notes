@@ -4,9 +4,9 @@
 
 int main()
 {
-    unsigned int result = pow(2, 32) - 1;
+    int result = pow(2, 31) - 1;
 
-    printf("result = %u\n", result);
+    printf("result = %d\n", result);
 
     return 0;
 }

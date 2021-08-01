@@ -17,5 +17,10 @@ int main()
     printf("size of j is %d\n", sizeof(j));
     printf("size of float is %d\n", sizeof(float));
     printf("size of k is %d\n", sizeof(k));
+
+    printf("short int = %d\n", sizeof(short));
+    printf("int = %d\n", sizeof(int));
+    printf("long int = %d\n", sizeof(long));
+    printf("long long int = %d\n", sizeof(long long));
     return 0;
 }

@@ -4,13 +4,17 @@
 
 int main()
 {
-    char str1[] = "I love";
+    char str1[] = "FishC.com!";
     char str2[] = "FishC.com!";
 
-    strcat(str1, " ");
-    strcat(str1, str2);
-
-    printf("str1: %s\n", str1);
+    if (!strcmp(str1, str2))
+    {
+        printf("Two strings are exactly the same!");
+    }
+    else
+    {
+        printf("There are differences in these two strings!");
+    }
 
     return 0;
 }

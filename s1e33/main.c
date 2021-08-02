@@ -1,4 +1,5 @@
-void func();
+extern void func();
+
 int count = 520;
 
 int main()

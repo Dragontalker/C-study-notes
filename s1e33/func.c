@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int count;
+extern int count;
 
 void func(void)
 {

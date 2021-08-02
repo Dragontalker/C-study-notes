@@ -10,5 +10,8 @@ int main()
     printf("**(array+1): %d\n", **(array+1));
     printf("array[1][0]: %d\n", array[1][0]);
 
+    printf("*(*(p+1)+2): %d\n", *(*(p+1)+2));
+    printf("array[1][2]: %d\n", array[1][2]);
+
     return 0;
 }

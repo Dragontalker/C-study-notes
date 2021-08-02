@@ -3,6 +3,9 @@
 
 int main()
 {
-    printf("Hello world!\n");
+    const float pi = 3.14;
+
+    printf("%f\n", pi);
+
     return 0;
 }

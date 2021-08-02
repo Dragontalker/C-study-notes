@@ -3,9 +3,13 @@
 
 int main()
 {
-    const float pi = 3.14;
+    int num = 520;
+    const int cnum = 880;
+    const int *pc = &cnum;
 
-    printf("%f\n", pi);
+    printf("cnum: %d, &cnum: %p\n", cnum, &cnum);
+    printf("*pc: %d, pc: %p\n", *pc, pc);
+
 
     return 0;
 }

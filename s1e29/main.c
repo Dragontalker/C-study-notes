@@ -1,21 +1,31 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdarg.h>
 
-void get_array(int b[]);
+int sum(int n, ...);
 
-void get_array(int b[])
+int sum(int n, ...)
 {
-    printf("sizeof b: %d\n", sizeof(b));
+    int i, sum = 0;
+    va_list vap;
+
+    va_start(vap, n);
+    for (i = 0; i < n; i++)
+    {
+        sum += va_arg(vap, int);
+    }
+    va_end(vap);
+
+    return sum;
 }
 
 
 int main()
 {
-    int a[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+    int result;
 
-    printf("sizeof a: %d\n", sizeof(a));
+    result = sum(1, 2, 3);
 
-    get_array(a);
+    printf("The sum is: %d\n", sum);
 
     return 0;
 }

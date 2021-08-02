@@ -1,27 +1,23 @@
 #include <stdio.h>
 
-char *getWord(char);
+int square(int);
 
-char *getWord(char c)
+int square(int num)
 {
-    switch(c)
-    {
-        case 'A': return "Apple";
-        case 'B': return "Banana";
-        case 'C': return "Cat";
-        case 'D': return "Dog";
-        default: return "None";
-    }
+    return num * num;
 }
 
 int main()
 {
-    char input;
+    int num;
+    int (*fp)(int);
 
-    printf("Please enter a letter: ");
-    scanf("%c", &input);
+    printf("Please enter an integer: ");
+    scanf("%d", &num);
 
-    printf("%s\n", getWord(input));
+    fp = square;
+
+    printf("%d * %d = %d\n", num, num, (*fp)(num));
 
     return 0;
 }

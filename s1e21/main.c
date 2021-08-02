@@ -18,5 +18,8 @@ int main()
     printf("new a = %c\n", a);
     printf("new f = %d\n", f);
 
+    printf("size of *pa = %d\n", sizeof(pa));
+    printf("size of *pf = %d\n", sizeof(pf));
+
     return 0;
 }

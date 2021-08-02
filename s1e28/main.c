@@ -17,6 +17,13 @@ void print_c()
 int main()
 {
     print_c();
+    printf("\n");
+
+    print_c();
+    printf("\n");
+
+    print_c();
+    printf("\n");
 
     return 0;
 }

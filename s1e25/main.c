@@ -3,19 +3,11 @@
 
 int main()
 {
-    int num = 1024;
-    int *pi = &num;
-    int *ps = "FishC";
-    void *pv;
+    int *p1;
+    int *p2 = NULL;
 
-    pv = pi;
-    printf("pv: %p, pi: %p\n", pv, pi);
-    printf("*pv: %d\n", *(int *)pv);
-
-    pv = ps;
-
-    printf("pv: %p, ps: %p\n", pv, ps);
-    printf("*pv: %s\n", (char *)pv);
+    printf("%d\n", *p1);
+    printf("%d\n", *p2);
 
     return 0;
 }

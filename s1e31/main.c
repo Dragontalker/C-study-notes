@@ -4,6 +4,7 @@ void func();
 
 void func()
 {
+    extern count;
     count++;
 }
 

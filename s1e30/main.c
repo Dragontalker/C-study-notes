@@ -22,7 +22,7 @@ int calc(int (*fp)(int, int), int num1, int num2)
 
 int (*select(char op))(int, int)
 {
-    swtich(op)
+    switch(op)
     {
         case '+': return add;
         case '-': return sub;
@@ -35,7 +35,7 @@ int main()
     char op;
     int (*fp)(int, int);
 
-    printf("Please enter an expression, such as 1+3");
+    printf("Please enter an expression, (such as 1+3): ");
     scanf("%d%c%d", &num1, &op, &num2);
 
     fp = select(op);

@@ -3,18 +3,13 @@
 
 int main()
 {
-    char *p1[5] = {
-        "Let programming change the world! -- FishC Studio",
-        "Just do it! -- NIKE",
-        "Everything is possible! -- LiNing",
-        "Never stop! -- AnTa",
-        "One more thing! -- Apple"
-    };
+    int temp[5] = {1, 2, 3, 4, 5};
+    int (*p2)[5] = &temp;
 
     int i;
 
     for (i = 0; i < 5; i++) {
-        printf("%s\n", p1[i]);
+        printf("%d\n", *(*p2 + i));
     }
 
     return 0;

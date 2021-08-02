@@ -3,7 +3,7 @@
 int add(int, int);
 int sub(int, int);
 int calc(int (*fp)(int, int), int, int);
-int (*select(char op))(int, int);
+int (*select(char))(int, int);
 
 int add(int num1, int num2)
 {

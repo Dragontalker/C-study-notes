@@ -5,16 +5,18 @@ void print_c();
 
 int sum(int n);
 
+int max(int, int);
+
 int main()
 {
-    int n, result;
+    int a, b, c;
 
-    printf("Please enter the value of n: ");
-    scanf("%d", &n);
+    printf("Please enter two integers: ");
+    scanf("%d%d", &a, &b);
 
-    result = sum(n);
+    c = max(a, b);
 
-    printf("1+2+3+...+(n-1)+n = %d\n", result);
+    printf("The max number of these two is: %d\n", c);
 
     return 0;
 }
@@ -40,4 +42,12 @@ int sum(int n)
     } while (n-- > 0);
 
     return result;
+}
+
+int max(int x, int y)
+{
+    if (x > y)
+        return x;
+    else
+        return y;
 }

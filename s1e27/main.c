@@ -5,16 +5,10 @@ int main()
 {
     int num = 520;
     const int cnum = 880;
-    const int *pc = &cnum;
-
-    printf("cnum: %d, &cnum: %p\n", cnum, &cnum);
-    printf("*pc: %d, pc: %p\n", *pc, pc);
-
-    pc = &num;
+    int * const p = &num;
 
     printf("num: %d, &num: %p\n", num, &num);
-    printf("*pc: %d, pc: %p\n", *pc, pc);
-
+    printf("*pc: %d, pc: %p\n", *p, p);
 
     return 0;
 }

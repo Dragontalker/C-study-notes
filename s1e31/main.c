@@ -1,8 +1,16 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
-    printf("Hello world!\n");
+    int i = 520;
+
+    printf("before, i = %d\n", i);
+
+    for (int i = 0; i < 10; i++)
+    {
+        printf("within loop, i = %d\n", i);
+    }
+
+    printf("after, i = %d\n", i);
     return 0;
 }

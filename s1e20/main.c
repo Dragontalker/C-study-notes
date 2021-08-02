@@ -20,11 +20,11 @@ int main()
 
     int i, j;
 
-    for (i = 0; i < 4; i++)
+    for (i = 0; i < 5; i++)
     {
-        for (j = 0; j < 5; j++)
+        for (j = 0; j < 4; j++)
         {
-            printf("%d ", score[i][j]);
+            printf("%d ", score[j][i]);
         }
         printf("\n");
 

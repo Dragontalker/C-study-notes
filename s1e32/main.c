@@ -14,6 +14,9 @@ int main(void)
             int i = 130; // i4
             printf("i = %d\n", i);
         }
+        printf("i = %d\n", i);
     }
+    printf("i = %d\n", i);
+
     return 0;
 }

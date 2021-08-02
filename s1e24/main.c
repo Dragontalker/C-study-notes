@@ -18,6 +18,8 @@ int main()
     printf("array[1]: %p\n", array[1]);
     printf("&array[1][0]: %p\n", &array[1][0]);
     printf("**(array + 1): %d\n", **(array + 1));
+    printf("*(*(array + 1) + 3): %d\n", *(*(array + 1) + 3));
+    printf("array[1][3]: %d\n", array[1][3]);
 
     return 0;
 }

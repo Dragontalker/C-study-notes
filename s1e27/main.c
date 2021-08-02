@@ -10,6 +10,11 @@ int main()
     printf("cnum: %d, &cnum: %p\n", cnum, &cnum);
     printf("*pc: %d, pc: %p\n", *pc, pc);
 
+    pc = &num;
+
+    printf("num: %d, &num: %p\n", num, &num);
+    printf("*pc: %d, pc: %p\n", *pc, pc);
+
 
     return 0;
 }

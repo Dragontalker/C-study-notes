@@ -21,5 +21,8 @@ int main()
     printf("size of *pa = %d\n", sizeof(pa));
     printf("size of *pf = %d\n", sizeof(pf));
 
+    printf("address of *pa = %p\n", pa);
+    printf("address of *pf = %p\n", pf);
+
     return 0;
 }

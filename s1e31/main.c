@@ -1,16 +1,34 @@
 #include <stdio.h>
 
+void a();
+void b();
+void c();
+
+int count = 0;
+
+void a()
+{
+    count++;
+}
+
+void b()
+{
+    count++;
+}
+
+void c()
+{
+    count++;
+}
+
 int main()
 {
-    int i = 520;
+    a();
+    b();
+    c();
+    b();
 
-    printf("before, i = %d\n", i);
+    printf("The total count is now: %d\n", count);
 
-    for (int i = 0; i < 10; i++)
-    {
-        printf("within loop, i = %d\n", i);
-    }
-
-    printf("after, i = %d\n", i);
     return 0;
 }

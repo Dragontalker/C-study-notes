@@ -3,16 +3,20 @@
 
 int main()
 {
-    char str[] = "I love FishC.com!";
-    char *target = str;
-    int count = 0;
+    int a = 1;
+    int b = 2;
+    int c = 3;
+    int d = 4;
+    int e = 5;
 
-    while (*target++ !='\0')
+    int *p1[5] = {&a, &b, &c, &d, &e};
+
+    int i;
+
+    for (i = 0; i < 5; i++)
     {
-        count++;
+        printf("%d\n", *p1[i]);
     }
-
-    printf("There are %d characters in total.", count);
 
     return 0;
 }

@@ -3,18 +3,12 @@
 
 int main()
 {
-    int a;
-    int *p = &a;
+    char str[128];
 
-    printf("Please enter an integer: ");
-    scanf("%d", &a);
+    printf("Please enter url of FishC: ");
+    scanf("%s", str);
 
-    printf("a = %d\n", a);
-
-    printf("Please re-enter an integer: ");
-    scanf("%d", p);
-
-    printf("new a = %d\n", a);
+    printf("The URL of FishC Studio is: %s\n", str);
 
     return 0;
 }

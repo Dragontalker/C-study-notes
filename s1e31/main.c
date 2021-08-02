@@ -1,34 +1,23 @@
 #include <stdio.h>
 
-void a();
-void b();
-void c();
+void func();
 
-int count = 0;
+int a, b = 520;
 
-void a()
+void func()
 {
-    count++;
-}
+    int b;
+    a = 886;
+    b = 120;
 
-void b()
-{
-    count++;
-}
-
-void c()
-{
-    count++;
+    printf("In func(), a = %d, b = %d\n", a, b);
 }
 
 int main()
 {
-    a();
-    b();
-    c();
-    b();
-
-    printf("The total count is now: %d\n", count);
+    printf("In main(), before func(), a = %d, b = %d\n", a, b);
+    func();
+    printf("In main(), after func(), a = %d, b = %d\n", a, b);
 
     return 0;
 }

@@ -1,24 +1,28 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-void recursion(void);
+long fact(int);
 
-void recursion(void)
+long fact(int num)
 {
-    static int count = 10;
+    long result;
 
-    printf("#%d\n", count);
-    printf("Hi!\n");
-
-    if (--count)
+    for (result = 1; num > 1; num--)
     {
-        recursion();
+        result *= num;
     }
+
+    return result;
 }
+
 
 int main(void)
 {
-    recursion();
+    int num;
+
+    printf("Please enter a positive integer: ");
+    scanf("%d", &num);
+
+    printf("The factorial of %d = %d\n", num, fact(num));
 
     return 0;
 }

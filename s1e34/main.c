@@ -6,9 +6,13 @@ long fact(int num)
 {
     long result;
 
-    for (result = 1; num > 1; num--)
+    if (num > 0)
     {
-        result *= num;
+        result = num * fact(num - 1);
+    }
+    else
+    {
+        result = 1;
     }
 
     return result;

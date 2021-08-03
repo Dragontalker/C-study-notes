@@ -1,8 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
+void recursion(void);
+
+void recursion(void)
 {
-    printf("Hello world!\n");
+    printf("Hi!\n");
+    recursion();
+}
+
+int main(void)
+{
+    recusion();
+
     return 0;
 }

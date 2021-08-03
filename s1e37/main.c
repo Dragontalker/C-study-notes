@@ -18,5 +18,9 @@ int main(void) {
 
     printf("The integer you entered is: %d\n", *ptr);
 
+    free(ptr);
+
+    printf("The integer you entered is: %d\n", *ptr);
+
     return 0;
 }

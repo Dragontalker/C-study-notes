@@ -5,13 +5,20 @@ void recursion(void);
 
 void recursion(void)
 {
+    static int count = 10;
+
+    printf("#%d\n", count);
     printf("Hi!\n");
-    recursion();
+
+    if (--count)
+    {
+        recursion();
+    }
 }
 
 int main(void)
 {
-    recusion();
+    recursion();
 
     return 0;
 }

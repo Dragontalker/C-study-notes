@@ -1,24 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+#define N 10
 
 int main(void) {
 
     int *ptr = NULL;
-    int num, i;
+    int i;
 
-    printf("Please enter how many integers you want to store: ");
-    scanf("%d", &num);
+    ptr = (int*) malloc(N * sizeof(int));
 
-    ptr = (int*) malloc(num * sizeof(int));
-
-    for (i = 0; i < num; i++) {
-        printf("Please enter integer #%d: ", i + 1);
-        scanf("%d", &ptr[i]);
+    if (ptr == NULL) {
+        return 1;
     }
 
-    printf("The integers you entered are: \n");
-    for (i = 0; i < num; i++) {
-        printf("#%d integer = %d\n", i + 1, ptr[i]);
+    memset(ptr, 0, N * sizeof(int));
+
+    for (i = 0; i < N; i++) {
+        printf("%d ", ptr[i]);
     }
 
     free(ptr);

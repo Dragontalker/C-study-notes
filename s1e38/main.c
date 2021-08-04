@@ -2,26 +2,20 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define N 10
-
 int main(void) {
 
-    int *ptr = NULL;
-    int i;
+    int* ptr1 = NULL;
+    int* ptr2 = NULL;
 
-    ptr = (int*) malloc(N * sizeof(int));
+    ptr1 = (int*) malloc(10 * sizeof(int));
 
-    if (ptr == NULL) {
-        return 1;
-    }
+    ptr2 = (int*) malloc(20 * sizeof(int));
 
-    memset(ptr, 0, N * sizeof(int));
+    memcpy(ptr2, ptr1, 10);
 
-    for (i = 0; i < N; i++) {
-        printf("%d ", ptr[i]);
-    }
+    free(ptr1);
 
-    free(ptr);
+    free(ptr2);
 
     return 0;
 }

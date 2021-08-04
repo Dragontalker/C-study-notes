@@ -11,6 +11,17 @@ int main()
     state = NEW;
 
     while ((c = getchar()) != EOF) {
-        putchar(c);
+
+        if (c == ' ' || c == '\t') {
+            state = NOT;
+        }
+
+        if (c == '\n') {
+            state = NEW;
+        }
+
+        if (state == NEW) {
+            putchar(c);
+        }
     }
 }

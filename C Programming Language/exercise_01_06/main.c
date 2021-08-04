@@ -14,8 +14,6 @@ int main(void)
     c = getchar() != EOF;
 
     printf("getchar() != EOF: %d\n", c);
-    printf("End of File value = %d\n", EOF);
-    printf("Is EOF equivilent to -1? %d\n", EOF == -1);
 
     return 0;
 }

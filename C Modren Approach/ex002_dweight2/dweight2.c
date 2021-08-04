@@ -21,7 +21,7 @@ int main(void)
     scanf("%d", &height);
 
     int volume = length * width * height;
-    int weight = (volume + 165) / INCHES_PER_POUND;
+    int weight = (volume + INCHES_PER_POUND - 1) / INCHES_PER_POUND;
 
     printf("Dimensions: %d\" x %d\" x %d\"\n", length, width, height);
     printf("Volumn (cubic inches): %d\n", volume);

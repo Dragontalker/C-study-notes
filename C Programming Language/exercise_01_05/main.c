@@ -6,11 +6,15 @@
 
 #include <stdio.h>
 
+#define LOWER 0         /* lower limit if table */
+#define UPPER 300       /* upper limit */
+#define STEP 20         /* step size */
+
 void main(void)
 {
     int celsius;
 
-    for (celsius = 300; celsius >= 0; celsius = celsius - 20) {
+    for (celsius = UPPER; celsius >= LOWER; celsius = celsius - STEP) {
         printf("%6d %3.1f\n", celsius, (9.0/5.0) * celsius + 32);
     }
 }

@@ -1,8 +1,21 @@
-#include <stdio.h>
-#include <stdlib.h>
+/*
+    Exercise 1-6:
+    Verify that the expression getchar() != EOF is 0 or 1.
+*/
 
-int main()
+#include <stdio.h>
+
+int main(void)
 {
-    printf("Hello world!\n");
+    int c;
+
+    printf("Please enter any character: ");
+
+    c = getchar() != EOF;
+
+    printf("getchar() != EOF: %d\n", c);
+    printf("End of File value = %d\n", EOF);
+    printf("Is EOF equivilent to -1? %d\n", EOF == -1);
+
     return 0;
 }

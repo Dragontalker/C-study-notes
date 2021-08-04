@@ -1,8 +1,12 @@
+/*
+ * Name: tprintf.c
+ * Purpose: Prints int and float values in various formats.
+ * Author: Richard T. Yang
+ */
 #include <stdio.h>
-#include <stdlib.h>
 
-int main()
+int main(void)
 {
-    printf("Hello world!\n");
+
     return 0;
 }

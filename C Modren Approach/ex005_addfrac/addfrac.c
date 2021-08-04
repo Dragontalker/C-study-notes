@@ -17,6 +17,10 @@ int main(void)
     printf("Please enter the second fraction: ");
     scanf("%d/%d", &num2, &denom2);
 
+    int result_num = num1 * denom2 + num2 * denom1;
+    int result_denom = denom1 * denom2;
+
+    printf("The sum is %d/%d.\n", result_num, result_denom);
 
     return 0;
 }

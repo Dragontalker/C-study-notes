@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1628194021 source:c:\users\richa\desktop\githubrepos\c-refresh\c modren approach\ex015_repdigit\repdigit.c
+	<stdbool.h>
+	<stdio.h>
+

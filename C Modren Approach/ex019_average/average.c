@@ -5,10 +5,7 @@
  */
 #include <stdio.h>
 
-double average(double a, double b)
-{
-    return (a + b) / 2;
-}
+double average(double, double);
 
 int main()
 {
@@ -21,4 +18,9 @@ int main()
     printf("Average of %g and %g: %g\n", x, z, average(x, z));
 
     return 0;
+}
+
+double average(double a, double b)
+{
+    return (a + b) / 2;
 }

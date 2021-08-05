@@ -6,20 +6,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-bool is_prime(int n)
-{
-    if (n <= 1) {
-        return false;
-    }
-
-    for (int divisor = 2; divisor * divisor <= n; divisor++) {
-        if (n % divisor == 0) {
-            return false;
-        }
-    }
-
-    return true;
-}
+bool is_prime(int);
 
 int main(void)
 {
@@ -34,4 +21,19 @@ int main(void)
     }
 
     return 0;
+}
+
+bool is_prime(int n)
+{
+    if (n <= 1) {
+        return false;
+    }
+
+    for (int divisor = 2; divisor * divisor <= n; divisor++) {
+        if (n % divisor == 0) {
+            return false;
+        }
+    }
+
+    return true;
 }

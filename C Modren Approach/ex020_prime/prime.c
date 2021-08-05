@@ -6,8 +6,8 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-bool is_prime(int n) {
-
+bool is_prime(int n)
+{
     if (n <= 1) {
         return false;
     }

@@ -69,5 +69,7 @@ int main(void)
             break;
     }
 
+    printf(", 20%.2d.\n", year);
+
     return 0;
 }

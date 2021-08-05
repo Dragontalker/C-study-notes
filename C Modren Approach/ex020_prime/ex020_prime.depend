@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1628198021 source:c:\users\richa\desktop\githubrepos\c-refresh\c modren approach\ex020_prime\prime.c
+	<stdbool.h>
+	<stdio.h>
+

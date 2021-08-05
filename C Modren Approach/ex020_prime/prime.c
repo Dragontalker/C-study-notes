@@ -23,6 +23,15 @@ bool is_prime(int n) {
 
 int main(void)
 {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (is_prime(n)) {
+        printf("Is a prime...");
+    } else {
+        printf("Not a prime...");
+    }
 
     return 0;
 }

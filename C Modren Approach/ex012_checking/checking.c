@@ -12,6 +12,7 @@ int main(void)
 
     int cmd;
     float credit, debit;
+
     for (float balance = 0.0f;;) {
         printf("Please enter a command: ");
         scanf("%d", &cmd);

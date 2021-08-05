@@ -7,6 +7,11 @@
 
 int main(void)
 {
+    int month, day, year;
+    printf("Please enter the date (mm/dd/yy): ");
+    scanf("%d/%d/%d", &month, &day, &year);
+
+
 
     return 0;
 }

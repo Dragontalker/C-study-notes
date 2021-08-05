@@ -12,9 +12,7 @@ int main(void)
 
     int cmd;
     float credit, debit;
-    float balance = 0.0f;
-
-    for (;;) {
+    for (float balance = 0.0f;;) {
         printf("Please enter a command: ");
         scanf("%d", &cmd);
 

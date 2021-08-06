@@ -21,3 +21,20 @@ int main(void)
     return 0;
 }
 
+void make_empty(void)
+{
+    top=0;
+}
+
+bool is_empty(void)
+{
+    return top == 0;
+}
+
+bool is_full(void)
+{
+    return top == STACK_SIZE;
+}
+
+
+

@@ -48,4 +48,13 @@ void initialize_number_generator(void)
     srand((unsigned) time(NULL));
 }
 
+/**
+  * Function: choose_new_secret_number
+  * Purpose: Randomly selects a number between 1 and MAX_NUMBER
+  *     and store it in secret_number.
+  */
+void choose_new_secret_number(void)
+{
+    secret_number = rand() % MAX_NUMBER + 1;
+}
 

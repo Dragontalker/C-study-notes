@@ -19,6 +19,21 @@ void read_guesses(void);
 
 int main()
 {
+    printf("Guess the secret number between 1 and %d.\n\n", MAX_NUMBER);
+    initialize_number_generator();
+
+    char command;
+
+    do {
+        choose_new_secret_number();
+        printf("A new number has been chosen.\n");
+
+        read_guesses();
+
+        printf("Play again? (Y/N) ");
+        scanf(" %c", &command);
+        printf(\n");
+    } while (command == 'y' || command == 'Y');
 
     return 0;
 }

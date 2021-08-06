@@ -37,3 +37,15 @@ int main()
 
     return 0;
 }
+
+/**
+  * Function: initialize_number_generator
+  * Purpose: Initializes the random number generator using
+  *     the time of day.
+  */
+void initialize_number_generator(void)
+{
+    srand((unsigned) time(NULL));
+}
+
+

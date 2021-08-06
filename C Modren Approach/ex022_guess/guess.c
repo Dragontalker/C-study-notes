@@ -9,13 +9,10 @@
 
 #define MAX_NUMBER 100
 
-/* external vairable */
-int secret_number;
-
 /* prototypes */
 void initialize_number_generator(void);
-void choose_new_secret_number(void);
-void read_guesses(void);
+int new_secret_number(void);
+void read_guesses(int);
 
 int main()
 {
@@ -24,11 +21,13 @@ int main()
 
     char command;
 
+    int secret_number;
+
     do {
-        choose_new_secret_number();
+        secret_number = new_secret_number();
         printf("A new number has been chosen.\n");
 
-        read_guesses();
+        read_guesses(secret_number);
 
         printf("Play again? (Y/N) ");
         scanf(" %c", &command);
@@ -49,13 +48,13 @@ void initialize_number_generator(void)
 }
 
 /**
-  * Function: choose_new_secret_number
-  * Purpose: Randomly selects a number between 1 and MAX_NUMBER
-  *     and store it in secret_number.
+  * Function: new_secret_number
+  * Purpose: Returns a randomly chosen number between 1 and
+  *     MAX_NUMBER.
   */
-void choose_new_secret_number(void)
+int new_secret_number(void)
 {
-    secret_number = rand() % MAX_NUMBER + 1;
+    return rand() % MAX_NUMBER + 1;
 }
 
 /**
@@ -65,7 +64,7 @@ void choose_new_secret_number(void)
   *     When the guess is correct, prints the total number of
   *     guesses and returns.
   */
-void read_guesses(void)
+void read_guesses(int secret_number)
 {
     int guess, num_guesses = 0;
 

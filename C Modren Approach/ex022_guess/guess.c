@@ -32,7 +32,7 @@ int main()
 
         printf("Play again? (Y/N) ");
         scanf(" %c", &command);
-        printf(\n");
+        printf("\n");
     } while (command == 'y' || command == 'Y');
 
     return 0;
@@ -56,5 +56,32 @@ void initialize_number_generator(void)
 void choose_new_secret_number(void)
 {
     secret_number = rand() % MAX_NUMBER + 1;
+}
+
+/**
+  * Function: read_guesses
+  * Purpose: Repeatedly reads user guesses and tells the user
+  *     whether each guess is too low, too high, or correct.
+  *     When the guess is correct, prints the total number of
+  *     guesses and returns.
+  */
+void read_guesses(void)
+{
+    int guess, num_guesses = 0;
+
+    for (;;) {
+        num_guesses++;
+        printf("Enter guess: ");
+        scanf("%d", &guess);
+
+        if (guess == secret_number) {
+            printf("You won in %d guesses!\n\n", num_guesses);
+            return;
+        } else if (guess < secret_number) {
+            printf("Too low, try again!\n");
+        } else {
+            printf("Too high, try again!\n");
+        }
+    }
 }
 

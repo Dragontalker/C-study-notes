@@ -2,15 +2,15 @@
 
 int main(void)
 {
-    int i = 10;
+    int i = 1;
 
     int* p = &i;
 
     int* q = p;
 
-    printf("Value at *p = %d\n", *(p));
-    printf("Value at *q = %d\n", *(q));
-    printf("Value of i = %d\n", i);
+    *(q) = 5;
+
+    printf("%d\n", *(p)); // 5?
 
     return 0;
 }

@@ -10,5 +10,8 @@ int main()
     printf("Address of a[] = %\p\n", a);
     printf("Address of p = %p\n", p);
 
+    printf("Address of a[3] = %\p\n", &a[3]);
+    printf("Address of p + 3 = %p\n", p + 3);
+
     return 0;
 }

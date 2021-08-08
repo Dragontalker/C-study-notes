@@ -9,9 +9,15 @@ int main()
 
     int len = sizeof(a) / sizeof(a[0]);
 
-    int* p;
+    int* p = &a[0];
 
-    for (p = a; p < p + len; p++) {
+    printf("Address of a = %p\n", a);
+    printf("Address of &a[i] = %p\n", &a[0]);
+
+    printf("Address of a[4] = %p\n", &a[4]);
+    printf("Address of p + 4 = %p\n", p + 4);
+
+    for (p = a; p < a + len ; p++) {
         sum += *(p);
     }
 

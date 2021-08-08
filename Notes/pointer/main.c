@@ -1,21 +1,19 @@
 #include <stdio.h>
 
-int* findMid(int [], int);
+void fun(const int*);
 
 int main(void)
 {
-    int a[] = {1, 2, 3, 4, 5};
+    const int i = 10;
 
-    int n = sizeof(a) / sizeof(a[0]);
+    fun(&i);
 
-    int* mid = findMid(a, n);
-
-    printf("%d", *(mid));
+    printf("i is now: %d\n", i);
 
     return 0;
 }
 
-int* findMid(int arr[], int len)
+void func(const int* p)
 {
-    return &arr[len/2];
+    *(p) = 0;
 }

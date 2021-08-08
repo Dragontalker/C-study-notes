@@ -1,32 +1,37 @@
 #include <stdio.h>
 
-int f(int, int*, int**);
+void swap(int*, int*);
+void printab(void);
 
 int main()
 {
-    int c = 4;
-    int* b = &c;
-    int** a = &b;
-
-    printf("%d", f(c, b, a));
+    printab();
+    printab();
 
     return 0;
 }
 
-int f(int x, int* py, int** ppz)
+void swap(int* x, int* y)
 {
-    int y, z;
+    static int* temp;
+    temp = x;
+    x = y;
+    y = temp;
+}
 
-    *(*(ppz)) += 1; // c = 5
+void printab()
+{
+    static int i, a = -3, b = -6;
 
-    z = *(*(ppz)); // z = 5
+    i = 0;
 
-    *(py) += 2; // c = 7
+    while (i <= 4)
+    {
+        if ((i++)%2 == 1) continue;
+        a = a + i;
+        b = b + i;
+    }
+    swap(&a, &b);
 
-    y = *(py); // y = 7
-
-    x += 3; // x = 7
-
-    return x + y + z;
-
+    printf("a = %d, b = %d\n", a, b);
 }

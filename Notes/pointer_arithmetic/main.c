@@ -1,21 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define N 5
+
 int main()
 {
-    int a[] = {11, 22, 36, 5, 2};
+    int a[N];
 
-    int sum = 0;
+    int* p;
 
-    int len = sizeof(a) / sizeof(a[0]);
+    printf("Enter %d elements in the array: \n", N);
 
-    int* p ;
-
-    for (p = a; p < a + len ; p++) {
-        sum += *(p);
+    for (p = a; p < a + N; p++) {
+        scanf("%d", p);
     }
 
-    printf("Sum is %d", sum);
+    printf("\nElements in reverse order: \n");
+
+    for (p = a + N - 1; p >= a; p--) {
+        printf(" %d", *(p));
+    }
+
+    printf("\n");
 
     return 0;
 }

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void fun(const int*);
+void fun(int*);
 
 int main(void)
 {
@@ -13,7 +13,7 @@ int main(void)
     return 0;
 }
 
-void func(const int* p)
+void fun(int* p)
 {
     *(p) = 0;
 }

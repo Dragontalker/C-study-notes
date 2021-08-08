@@ -1,27 +1,23 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-#define N 5
+int add(int [], int);
 
 int main()
 {
-    int a[N];
+    int a[] = {1, 2, 3, 4};
 
-    int* p;
+    int len = sizeof(a) / sizeof(a[0]);
 
-    printf("Enter %d elements in the array: \n", N);
-
-    for (p = a; p < a + N; p++) {
-        scanf("%d", p);
-    }
-
-    printf("\nElements in reverse order: \n");
-
-    for (p = a + N - 1; p >= a; p--) {
-        printf(" %d", *(p));
-    }
-
-    printf("\n");
+    printf("%d", add(a, len));
 
     return 0;
+}
+
+int add(int b[], int len)
+{
+    int sum = 0;
+    for(int i = 0; i < len; i++) {
+        sum += b[i];
+    }
+    return sum;
 }

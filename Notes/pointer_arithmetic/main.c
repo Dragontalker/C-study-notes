@@ -1,23 +1,22 @@
 #include <stdio.h>
 
-int add(int [], int);
-
 int main()
 {
-    int a[] = {1, 2, 3, 4};
+    int a[][3] = {1, 2, 3, 4, 5, 6};
 
-    int len = sizeof(a) / sizeof(a[0]);
+    int (*ptr)[3] = a;
 
-    printf("%d", add(a, len));
+    printf("%d %d \n", (*ptr)[1], (*ptr)[2]);
+
+    printf("%d %d \n", *(*ptr + 1), *(*ptr + 2));
+
+    ++ptr;
+
+    printf("%d %d \n", (*ptr)[1], (*ptr)[2]);
+
+    printf("%d %d \n", *(*ptr + 1), *(*ptr + 2));
 
     return 0;
 }
 
-int add(int b[], int len)
-{
-    int sum = 0;
-    for(int i = 0; i < len; i++) {
-        sum += b[i];
-    }
-    return sum;
-}
+

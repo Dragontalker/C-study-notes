@@ -1,28 +1,34 @@
 #include <stdio.h>
 
-int f(int*, int);
+int f(int x, int* py, int** ppz)
+{
+    int y, z;
 
-int i = 0;
-int j = 1;
+    *(*(ppz)) += 1; // c = 5
+
+    z = *(*(ppz)); // z = 5
+
+    *(py) += 2; // c = 7
+
+    y = *(py); // y = 7
+
+    x += 3; // x = 7
+
+    return x + y + z;
+
+}
 
 int main()
 {
-    int a[] = {12, 7, 13, 4, 11, 6};
+    int c = 4;
+    int* b = &c;
+    int** a = &b;
 
-    printf("%d", f(a, 6)); //12 + (7 - (13 - (4 + (11 - (6 + 0)))))
+    printf("%d", f(c, b, a));
 
     return 0;
 }
 
-int f(int* a, int n)
-{
-    if (n <= 0) {
-        return 0;
-    } else if (*(a) % 2 == 0) {
-        return *(a) + f(a+1, n-1);
-    } else {
-        return *(a) - f(a+1, n-1);
-    }
-}
+
 
 

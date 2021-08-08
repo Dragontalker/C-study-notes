@@ -1,5 +1,18 @@
 #include <stdio.h>
 
+int f(int, int*, int**);
+
+int main()
+{
+    int c = 4;
+    int* b = &c;
+    int** a = &b;
+
+    printf("%d", f(c, b, a));
+
+    return 0;
+}
+
 int f(int x, int* py, int** ppz)
 {
     int y, z;
@@ -17,18 +30,3 @@ int f(int x, int* py, int** ppz)
     return x + y + z;
 
 }
-
-int main()
-{
-    int c = 4;
-    int* b = &c;
-    int** a = &b;
-
-    printf("%d", f(c, b, a));
-
-    return 0;
-}
-
-
-
-

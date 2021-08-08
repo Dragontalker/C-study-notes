@@ -1,22 +1,23 @@
 #include <stdio.h>
 
+void f(int*, int*);
+
+int i = 0;
+int j = 1;
+
 int main()
 {
-    int a[][3] = {1, 2, 3, 4, 5, 6};
+    f(&i, &j);
 
-    int (*ptr)[3] = a;
-
-    printf("%d %d \n", (*ptr)[1], (*ptr)[2]);
-
-    printf("%d %d \n", *(*ptr + 1), *(*ptr + 2));
-
-    ++ptr;
-
-    printf("%d %d \n", (*ptr)[1], (*ptr)[2]);
-
-    printf("%d %d \n", *(*ptr + 1), *(*ptr + 2));
+    printf("%d %d\n", i, j);
 
     return 0;
+}
+
+void f(int* p, int* q)
+{
+    p = q;
+    *(p) = 2;
 }
 
 

@@ -3,17 +3,19 @@
 
 int main()
 {
-    int a[] = {5, 16, 7, 89, 45, 32, 23, 10};
+    int a[] = {11, 22, 36, 5, 2};
 
-    int* p = &a[1]; //16
-    int* q = &a[5]; //32
+    int sum = 0;
 
-    printf("%d ", *(p + 3)); //45
-    printf("%d ", *(q - 3)); //7
-    printf("%d ", q - p); //4
-    printf("%d ", p < q); //1
-    printf("%d ", *(p) < *(q)); //1
+    int len = sizeof(a) / sizeof(a[0]);
 
+    int* p;
+
+    for (p = a; p < p + len; p++) {
+        sum += *(p);
+    }
+
+    printf("Sum is %d", sum);
 
     return 0;
 }

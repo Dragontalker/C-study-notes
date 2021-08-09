@@ -3,16 +3,16 @@
 
 #pragma pack(1)
 
-struct abc {
-    char a;
-    int b;
-    char c;
+struct Ournode {
+    char x, y, z;
 };
 
 int main()
 {
-    struct abc var;
-    printf("%d", sizeof(var));
+    struct Ournode p = {'1', '0', 'a'+2};
+    struct Ournode *q = &p;
+
+    printf("%c, %c", *((char*)q+1), *((char*)q+2));
 
     return 0;
 }

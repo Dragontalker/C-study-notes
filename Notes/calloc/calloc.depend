@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1628535530 source:c:\users\richa\desktop\githubrepos\c-refresh\notes\calloc\main.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -4,16 +4,12 @@
 union abc {
     int a;
     char b;
-} var;
+    double c;
+    float d;
+};
 
 int main()
 {
-    var.a = 65;
-    printf("a = %d\n", var.a);
-    printf("b = %c\n", var.b);
-
-    var.b = 'B';
-    printf("a = %d\n", var.a);
-    printf("b = %c\n", var.b);
+    printf("%ld", sizeof(union abc));
     return 0;
 }

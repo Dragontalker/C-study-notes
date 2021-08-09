@@ -3,11 +3,15 @@
 
 int main()
 {
-    char* fruits[] = {"2 oranges", "2 apples", "3 banans"};
+    char p[20];
+    char* s = "string";
 
-    printf("1st string = %s\n", fruits[0]);
-    printf("2nd string = %s\n", fruits[1]);
-    printf("3rd string = %s\n", fruits[2]);
+    int length = strlen(s); //6
+    for (int i = 0; i < length; i++)
+        p[i] = s[length - i - 1];
+    p[length] = '\0';
+
+    printf("%s", p);
 
     return 0;
 }

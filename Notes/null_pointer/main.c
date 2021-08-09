@@ -3,17 +3,24 @@
 
 int main(void) {
 
-    int* ptr = (int*) malloc(2 * sizeof(int));
+    int n;
+    printf("Enter the number of integers: ");
+    scanf("%d", &n);
 
-    printf("The initial address = %p\n", ptr);
-    printf("The size of NULL = %d\n", sizeof(NULL));
+    int* ptr = (int*) malloc(n * sizeof(int));
 
-    if (ptr == NULL){
-        printf("Memory could not be alllocated...");
-    } else {
-        printf("Memory allocated succesfully!\n");
-        printf("The address = %p\n", ptr);
-        free(ptr);
+    if (ptr == NULL) {
+        printf("Memory not available.");
+        exit(1);
+    }
+
+    for (int i = 0; i < n; i++) {
+        printf("Enter an integer: ");
+        scanf("%d", ptr + i);
+    }
+
+    for (int i = 0; i < n; i++) {
+        printf("%d ", *(ptr + i));
     }
 
     return EXIT_SUCCESS;

@@ -4,6 +4,8 @@ int input(char [], int);
 
 int main(void)
 {
+    printf("Please enter your string: ");
+
     char str[100];
 
     int n = input(str, 5);

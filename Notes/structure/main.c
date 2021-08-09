@@ -2,16 +2,15 @@
 #include <stdlib.h>
 
 struct abc {
-    int x;
-    int y;
-    int z;
+    char a;
+    int b;
+    char c;
 };
 
 int main()
 {
-    struct abc a = {.y = 20, .x = 10, .z = 30};
-
-    printf("%d %d %d", a.x, a.y, a.z);
+    struct abc var;
+    printf("%d", sizeof(var));
 
     return 0;
 }

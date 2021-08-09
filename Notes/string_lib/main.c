@@ -3,13 +3,13 @@
 
 int main(void)
 {
-    char str1[10] = "Hello";
-    char str2[6];
-    char str3[10];
+    char* str1 = "Hello World";
+    char str2[] = "Hello World";
+    char str3[100] = "Hello World";
 
-    printf("%s\n", strncpy(str2, str1, sizeof(str2)));
-    printf("%s\n", strcpy(str3, strcpy(str2, str1)));
-    printf("%s\n", str2);
+    printf("The length = %d\n", strlen(str1));
+    printf("The length = %d\n", strlen(str2));
+    printf("The length = %d\n", strlen(str3));
 
     return 0;
 }

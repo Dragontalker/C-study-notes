@@ -15,6 +15,7 @@ int main(void) {
     } else {
         printf("Memory allocated succesfully!\n");
         printf("The address = %p\n", ptr);
+        free(ptr);
     }
 
     return EXIT_SUCCESS;

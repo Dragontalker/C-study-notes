@@ -3,14 +3,14 @@
 
 int main(void)
 {
-    char str1[100], str2[100];
+    char str1[15], str2[100];
 
     strcpy(str1, "Welcome to ");
     strcpy(str2, "our Academy");
 
     printf("The address of str1 = %p\n", str1);
 
-    strcat(str1, str2);
+    strncat(str1, str2, sizeof(str1) - strlen(str1) - 1);
 
     printf("The address of str1 = %p\n", str1);
 

@@ -1,15 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+struct {
+    char* engine;
+} car1, car2;
+
 int main()
 {
-    struct {
-        char* engine;
-        char* fule_type;
-        int fule_tank_cap;
-        int seating_cap;
-        float city_mileage;
-    } car1, car2;
+    car1.engine = "DDis 190 Engine";
+    car2.engine = "1.2 L Kappa Dual VTVT";
+
+    printf("%s\n", car1.engine);
+    printf("%s\n", car2.engine);
 
     return 0;
 }

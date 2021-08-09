@@ -3,12 +3,10 @@
 
 int main(void) {
 
-    int* ptr;
+    int* ptr = (int*) malloc(2 * sizeof(int));
 
     printf("The initial address = %p\n", ptr);
     printf("The size of NULL = %d\n", sizeof(NULL));
-
-    ptr = (int*) malloc(2 * sizeof(int));
 
     if (ptr == NULL){
         printf("Memory could not be alllocated...");

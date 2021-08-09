@@ -3,13 +3,18 @@
 
 int main(void)
 {
-    char* str1 = "Hello World";
-    char str2[] = "Hello World";
-    char str3[100] = "Hello World";
+    char str1[100], str2[100];
 
-    printf("The length = %d\n", strlen(str1));
-    printf("The length = %d\n", strlen(str2));
-    printf("The length = %d\n", strlen(str3));
+    strcpy(str1, "Welcome to ");
+    strcpy(str2, "our Academy");
+
+    printf("The address of str1 = %p\n", str1);
+
+    strcat(str1, str2);
+
+    printf("The address of str1 = %p\n", str1);
+
+    printf("%s", str1);
 
     return 0;
 }

@@ -10,6 +10,8 @@ union abc {
 
 int main()
 {
-    printf("%ld", sizeof(union abc));
-    return 0;
+    for (size_t i = 0; i < 10; i++) {
+        printf("#%d\n", i);
+    }
+    return EXIT_SUCCESS;
 }

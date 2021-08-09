@@ -3,18 +3,13 @@
 
 int main(void)
 {
-    char str1[15], str2[100];
+    char* s1 = "abcd";
+    char* s2 = "abce";
 
-    strcpy(str1, "Welcome to ");
-    strcpy(str2, "our Academy");
-
-    printf("The address of str1 = %p\n", str1);
-
-    strncat(str1, str2, sizeof(str1) - strlen(str1) - 1);
-
-    printf("The address of str1 = %p\n", str1);
-
-    printf("%s", str1);
+    if (strcmp(s1, s2) < 0)
+        printf("s1 is less than s2");
+    else
+        printf("s1 is greater than or equal to s2");
 
     return 0;
 }

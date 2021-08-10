@@ -11,6 +11,7 @@ struct Student {
 int main(void)
 {
     struct Student s1 = {"Nick", 16, 50, 72.5};
+    struct Student s2 = {"Tom", 18, 40, 80};
 
     printf("Student.name = %s\n", s1.name);
     printf("Student.age = %d\n", s1.age);

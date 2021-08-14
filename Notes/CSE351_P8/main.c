@@ -4,8 +4,8 @@
 void show_bytes(char*, int);
 void show_int(int);
 
-int main(void)
-{
+int main(void) {
+
     int a = 12345; // represented as 0x00003039
 
     printf("int a = 12345;\n");
@@ -15,16 +15,17 @@ int main(void)
     return EXIT_SUCCESS;
 }
 
-void show_bytes(char* start, int len)
-{
-    for (size_t i = 0; i < len; i++)
-    {
+void show_bytes(char* start, int len) {
+
+    for (size_t i = 0; i < len; i++) {
+
         printf("%p\t0x%.2x\n", start + i, *(start + i));
     }
+
     printf("\n");
 }
 
-void show_int(int x)
-{
+void show_int(int x) {
+
     show_bytes( (char*) &x, sizeof(int));
 }

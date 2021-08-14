@@ -6,10 +6,11 @@ void show_int(int);
 
 int main(void)
 {
-    int a = 12345;
+    int a = 12345; // represented as 0x00003039
 
     printf("int a = 12345;\n");
-    show_int(a);
+
+    show_int(a); // show_bytes( (byte*) &a, sizeof(it));
 
     return EXIT_SUCCESS;
 }

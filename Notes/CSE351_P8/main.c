@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits>
 
 void show_bytes(char*, int);
 void show_int(int);

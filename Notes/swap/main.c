@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 void swap(int*, int*);
-void swap_1(long*, long*);
+void swap_long(long*, long*);
 
 int main()
 {
@@ -18,11 +18,11 @@ int main()
     long c = 3l;
     long d = 4l;
 
-    printf("Before swap_1, c = %ld, d = %ld\n", c, d);
+    printf("Before swap_long, c = %ld, d = %ld\n", c, d);
 
-    swap_1(&c, &d);
+    swap_long(&c, &d);
 
-    printf("After swap_1, c = %ld, d = %ld\n", c, d);
+    printf("After swap_long, c = %ld, d = %ld\n", c, d);
 
     return 0;
 }
@@ -35,7 +35,7 @@ void swap(int* xp, int* yp)
     *(yp) = t0;
 }
 
-void swap_1(long* xp, long* yp)
+void swap_long(long* xp, long* yp)
 {
     long t0 = *(xp);
     long t1 = *(yp);

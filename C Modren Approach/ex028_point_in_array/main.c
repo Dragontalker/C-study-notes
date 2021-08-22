@@ -4,9 +4,10 @@
 double sum0(size_t, double const*);
 double sum1(size_t, double const*);
 double sum2(size_t, double const*);
+double sum3(size_t, double const*);
 
-int main(void) {
-
+int main(void)
+{
     double A[7] = {0, 1, 2, 3, 4, 5, 6};
 
     double s0_7 = sum0(7, &A[0]);
@@ -16,8 +17,8 @@ int main(void) {
     return EXIT_SUCCESS;
 }
 
-double sum0(size_t len, double const* a) {
-
+double sum0(size_t len, double const* a)
+{
     double ret = 0.0;
 
     for (size_t i = 0; i < len; i++) {
@@ -27,8 +28,8 @@ double sum0(size_t len, double const* a) {
     return ret;
 }
 
-double sum1(size_t len, double const* a) {
-
+double sum1(size_t len, double const* a)
+{
     double ret = 0.0;
 
     for (double const* p = a; p < a + len; p++) {
@@ -38,13 +39,26 @@ double sum1(size_t len, double const* a) {
     return ret;
 }
 
-double sum2(size_t len, double const* a) {
-
+double sum2(size_t len, double const* a)
+{
     double ret = 0.0;
 
     for (double const* const aStop = a + len; a < aStop; a++) {
         ret += *(a);
     }
+
+    return ret;
+}
+
+double sum3(size_t len, double const* a)
+{
+    double ret = 0.0;
+    double const* p = a + len - 1;
+
+    do {
+        ret += *(p);
+        p--;
+    } while (p > a);
 
     return ret;
 }

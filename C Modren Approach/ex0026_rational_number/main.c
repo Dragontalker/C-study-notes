@@ -11,6 +11,7 @@ struct rat {
 };
 
 rat rat_get(long long, unsigned long long);
+rat rat_get_normal(rat);
 
 int main()
 {
@@ -28,4 +29,12 @@ rat rat_get(long long num, unsigned long long denom)
     };
 
     return ret;
+}
+
+rat rat_get_normal(rat x)
+{
+    size_t c = gcd(x.num, x.denom);
+    x.num /= c;
+    x.denom /= c;
+    return x;
 }

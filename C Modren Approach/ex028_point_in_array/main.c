@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 double sum0(size_t, double const*);
+double sum1(size_t, double const*);
 
 int main(void)
 {
@@ -20,6 +21,17 @@ double sum0(size_t len, double const* a)
 
     for (size_t i = 0; i < len; i++) {
         ret += *(a + i);
+    }
+
+    return ret;
+}
+
+double sum1(size_t len, double const* a)
+{
+    double ret = 0.0;
+
+    for (double const* p = a; p < a + len; p++) {
+        ret += *(p);
     }
 
     return ret;

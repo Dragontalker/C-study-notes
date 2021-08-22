@@ -3,6 +3,7 @@
 
 double sum0(size_t, double const*);
 double sum1(size_t, double const*);
+double sum2(size_t, double const*);
 
 int main(void) {
 
@@ -32,6 +33,17 @@ double sum1(size_t len, double const* a) {
 
     for (double const* p = a; p < a + len; p++) {
         ret += *(p);
+    }
+
+    return ret;
+}
+
+double sum2(size_t len, double const* a) {
+
+    double ret = 0.0;
+
+    for (double const* const aStop = a + len; a < aStop; a++) {
+        ret += *(a);
     }
 
     return ret;

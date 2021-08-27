@@ -3,11 +3,12 @@
 
 typedef const char* String;
 
-enum corvid { magpie, raven, jay, corvid_num };
+enum corvid { magpie, raven, jay, chough, corvid_num };
 
 int main(void)
 {
     String const bird[corvid_num] = {
+        [chough] = "chough",
         [raven] = "raven",
         [magpie] = "magpie",
         [jay] = "jay"

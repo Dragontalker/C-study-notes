@@ -12,8 +12,27 @@
 
 typedef struct tm Time;
 
+bool leap_year(unsigned);
+Time time_set_yday(Time);
+
 int main(void)
 {
 
     return EXIT_SUCCESS;
+}
+
+bool leap_year(unsigned year) {
+
+    return !(year % 4) && ((year % 100) || !(year % 400));
+}
+
+Time time_set_yday(Time t) {
+
+    t.tm_mday += DAYS_BEFORE[t.tm_mon] + t.tm_mday - 1;
+
+    if ((t.tm_mon > 1) && leap_year(t.tm_year + 1900)) {
+        t.tm_yday++;
+    }
+
+    return t;
 }

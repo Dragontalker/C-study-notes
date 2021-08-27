@@ -13,10 +13,8 @@ int main(void) {
     };
 
     for (size_t i = 0; i < N; i++) {
-        printf("element %zu is %g, \tits square is %g\n",
-               i,
-               A[i],
-               A[i]*A[i]);
+        printf("element %zu is %g, \t", i, A[i]);
+        printf("its square is %g\n", A[i]*A[i]);
     }
 
     return EXIT_SUCCESS;

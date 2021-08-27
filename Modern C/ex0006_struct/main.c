@@ -21,5 +21,10 @@ int main(void)
         .jay = "Joe"
     };
 
+    printf("Chough's name = %s\n", aName.chough);
+    printf("Raven's name = %s\n", aName.raven);
+    printf("Magpie's name = %s\n", aName.magpie);
+    printf("Jay's name = %s\n", aName.jay);
+
     return EXIT_SUCCESS;
 }

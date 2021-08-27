@@ -17,6 +17,17 @@ Time time_set_yday(Time);
 
 int main(void)
 {
+    Time today = {
+        .tm_year = 2019-1900,
+        .tm_mon = 4-1,
+        .tm_mday = 3,
+        .tm_hour = 10,
+        .tm_min = 0,
+        .tm_sec = 47
+    };
+
+    printf("This year is %d\n", today.tm_year + 1900);
+    printf("Next year will be %d\n", today.tm_year + 1900 + 1);
 
     return EXIT_SUCCESS;
 }

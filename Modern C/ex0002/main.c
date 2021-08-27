@@ -3,11 +3,13 @@
 
 #define N 3
 
+typedef const char* String;
+
 int main(void) {
 
-    const char* const bird[N] = {"raven","magpie","jay"};
-    const char* const pronoun[N] = {"we", "you", "they"};
-    const char* const ordinal[N] = {"first", "second", "third"};
+    String const bird[N] = {"raven","magpie","jay"};
+    String const pronoun[N] = {"we", "you", "they"};
+    String const ordinal[N] = {"first", "second", "third"};
 
     for (unsigned i = 0; i < N; i++) {
         printf("Corvid #%u is the %s.\n", i+1, bird[i]);

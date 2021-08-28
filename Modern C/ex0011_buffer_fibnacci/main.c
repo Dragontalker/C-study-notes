@@ -6,7 +6,7 @@ size_t fib2(size_t);
 
 int main(void)
 {
-    printf("The Fibonacci nuber of 100 = %zu\n", fib2(100));
+    printf("The Fibonacci nuber of 100 = %zu\n", fib2(10000));
 
     return EXIT_SUCCESS;
 }

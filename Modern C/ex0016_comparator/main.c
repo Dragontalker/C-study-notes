@@ -3,8 +3,11 @@
 
 int compare_unsigned(const void*, const void*);
 
-int main(void)
-{
+int main(void) {
+
+    int res = compare_unsigned(10, 8);
+
+    printf("The resullt = %d\n", res);
 
     return EXIT_SUCCESS;
 }

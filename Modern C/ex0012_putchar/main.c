@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int puts_manually(char const s[static 1]);
+typedef const char* String;
+
+int puts_manually(String);
 
 int main(void)
 {
@@ -10,10 +12,10 @@ int main(void)
     return EXIT_SUCCESS;
 }
 
-int puts_manually(char const s[static 1]) {
+int puts_manually(String str) {
 
-    for (size_t i = 0; s[i]; i++) {
-        if (putchar(s[i]) == EOF) {
+    for (size_t i = 0; *(str + i); i++) {
+        if (putchar(*(str + i)) == EOF) {
             return EOF;
         }
     }
@@ -22,5 +24,5 @@ int puts_manually(char const s[static 1]) {
         return EOF;
     }
 
-    return 0;
+    return EXIT_SUCCESS;
 }

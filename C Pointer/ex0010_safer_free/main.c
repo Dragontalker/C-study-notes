@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void saferFree(void**);
+#define safeFree(p) saferFree((void**)&(p))\
 
-#define safeFree(p) saferFree((void**)&(p))
+void saferFree(void**);
 
 int main(void) {
 

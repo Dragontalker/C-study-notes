@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1630267709 source:c:\users\richa\desktop\githubrepos\c-refresh\c pointer\ex0010_safer_free\main.c
+	<stdio.h>
+	<stdlib.h>
+

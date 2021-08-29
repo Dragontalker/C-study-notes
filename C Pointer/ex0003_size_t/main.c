@@ -8,5 +8,10 @@ int main(void) {
     printf("%d\n", sizet);
     printf("%u\n", sizet);
 
+    sizet = 5;
+
+    printf("%d\n", sizet);
+    printf("%u\n", sizet);
+
     return EXIT_SUCCESS;
 }

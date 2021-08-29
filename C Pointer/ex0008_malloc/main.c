@@ -9,5 +9,7 @@ int main(void) {
 
     printf("*pi = %d\n", *(pi));
 
+    free(pi);
+
     return EXIT_SUCCESS;
 }

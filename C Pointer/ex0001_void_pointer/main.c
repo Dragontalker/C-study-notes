@@ -1,17 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* void* has value of NULL*/
-/* pointer that pointing to uninitialized value also has value of NULL */
 int main(void) {
 
     int num;
     int* pi = &num;
-    printf("Value of pi = %p\n", pi);
+    printf("Address of pi = %p\n", pi);
+
+    if (pi == NULL) {
+        printf("Value of pi = NULL\n");
+    } else {
+        printf("Value of pi != NULL\n");
+    }
 
     void* pv = pi;
     pi = (int*) pv;
-    printf("value of pi = %p\n", pi);
+    printf("Address of pi = %p\n", pi);
+
+    if (pi == NULL) {
+        printf("Value of pi = NULL\n");
+    } else {
+        printf("Value of pi != NULL\n");
+    }
 
     return EXIT_SUCCESS;
 }

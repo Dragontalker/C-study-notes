@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1630258580 source:c:\users\richa\desktop\githubrepos\c-refresh\c pointer\ex0007_double_ptr\main.c
+	<stdio.h>
+	<stdlib.h>
+

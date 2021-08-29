@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* void* has value of NULL, so does uninitialized pointer */
+/* void* has value of NULL*/
+/* pointer that pointing to uninitialized value also has value of NULL */
 int main(void) {
     int num;
     int* pi = &num;

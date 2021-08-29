@@ -4,6 +4,7 @@
 int* global_pi;
 
 void foo() {
+
     static int* static_pi;
 
     if (static_pi == NULL) {
@@ -13,8 +14,8 @@ void foo() {
     }
 }
 
-int main(void)
-{
+int main(void){
+
     if (global_pi == NULL) {
         printf("The value of global_pi = NULL\n");
     } else {

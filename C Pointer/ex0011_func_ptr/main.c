@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int square(int);
+typedef int (*Func_ptr)(int);
 
-int (*fptr1)(int);
+int square(int);
 
 int main(void)
 {
     int n = 5;
+
+    Func_ptr fptr1;
     fptr1 = square;
 
     printf("%d squared is %d\n", n, fptr1(n));

@@ -4,12 +4,14 @@
 #define M 2
 #define N 3
 
-int main(void)
-{
-    int matrix[M][N] = { { 1, 2, 3}, { 4, 5, 6 } };
+int main(void) {
 
-    for (unsigned i = 0; i < M; i++)
-    {
+    int matrix[M][N] = {
+        { 1, 2, 3 },
+        { 4, 5, 6 }
+    };
+
+    for (unsigned i = 0; i < M; i++) {
         printf(
            "&matrix[%d]: %p, sizeof(matrix[%d]): %d\n",
            i,

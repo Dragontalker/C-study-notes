@@ -4,10 +4,10 @@
 char* trim(char*);
 
 int main(void) {
-    char* buffer = (char*) malloc(strlen(" cat") + 1);
+    char* buffer = (char*) malloc(strlen(" cat ") + 1);
 
     strcpy(buffer, " cat");
-    printf("%s\n", trim(buffer));
+    printf("|%s|\n", trim(buffer));
 
     return EXIT_SUCCESS;
 }

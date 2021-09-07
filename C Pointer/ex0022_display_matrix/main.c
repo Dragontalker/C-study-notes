@@ -5,6 +5,7 @@
 #define N 5
 
 void display2DArray(int[][N], int);
+void display2DArrayUnknownSize(int*, int, int);
 
 int main(void)
 {
@@ -34,6 +35,8 @@ int main(void)
 
     display2DArray(matrix, M);
 
+    display2DArrayUnknownSize(&matrix[0][0], M, N);
+
     return EXIT_SUCCESS;
 }
 
@@ -44,6 +47,18 @@ void display2DArray(int arr[][N], int rows)
         for(int j = 0; j < N; j++)
         {
             printf("[%d] ", arr[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void display2DArrayUnknownSize(int* arr, int rows, int cols)
+{
+    for(int i = 0; i < rows; i++)
+    {
+        for(int j = 0; j < cols; j++)
+        {
+            printf("[%d] ", *(arr + (i * cols) + j));
         }
         printf("\n");
     }

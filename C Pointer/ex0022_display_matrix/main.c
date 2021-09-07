@@ -19,5 +19,13 @@ int main(void)
         }
     }
 
+    int (*pmatrix)[5] = matrix;
+
+    printf("%p\n", matrix);
+    printf("%p\n", matrix + 1);
+    printf("%d\n", sizeof(matrix[0]));
+
+    printf("%p %d\n", matrix[0] + 1, *(matrix[0] + 1));
+
     return EXIT_SUCCESS;
 }

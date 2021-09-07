@@ -21,11 +21,11 @@ int main(void)
 
     int (*pmatrix)[5] = matrix;
 
-    printf("%p\n", matrix);
-    printf("%p\n", matrix + 1);
-    printf("%d\n", sizeof(matrix[0]));
+    printf("%p\n", pmatrix);
+    printf("%p\n", pmatrix + 1);
+    printf("%d\n", sizeof(pmatrix[0]));
 
-    printf("%p %d\n", matrix[0] + 1, *(matrix[0] + 1));
+    printf("%p %d\n", pmatrix[0] + 1, *(pmatrix[0] + 1));
 
     return EXIT_SUCCESS;
 }
